@@ -25,7 +25,7 @@ We are shooting for an 80/20 payoff: What relatively simple techniques can we us
 
 # The tools
 
-The tools that the application brings to bear are fairly standard critical thinking ones, with [Online Tools for Skeptical Fact Checking](http://www.csicop.org/specialarticles/show/online_tools_for_skeptical_fact_checking) providing an excellent summary. Below we list the particular tools in mind. Note that this is a preliminary list that needs tighter thinking.
+The tools that the application brings to bear are fairly standard critical thinking ones, with [Online Tools for Skeptical Fact Checking](http://www.csicop.org/specialarticles/show/online_tools_for_skeptical_fact_checking) providing an excellent summary. Below we list the particular tools in mind (see skeptical-toolbox.xmind for an [XMind](http://www.xmind.net/) file giving details - still a bit rough, though). Note that this is a preliminary list that needs tighter thinking.
 
 * URL analysis
 * link analysis (outgoing, incoming)
