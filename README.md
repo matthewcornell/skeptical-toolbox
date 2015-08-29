@@ -58,7 +58,7 @@ Fortunately the tools cover a range of complexity, which affords our quickly rol
 
 # Future: An automated guide
 
-If the project appears useful, we envision adding a meta layer: an interactive wizard that guides users through using the tools via standard (critical thinking)[https://en.wikibooks.org/wiki/A-level_Critical_Thinking] pedagogy, such as assessing a source's credibility:
+If the project appears useful, we envision adding a meta layer: an interactive wizard that guides users through using the tools via standard [critical thinking](https://en.wikibooks.org/wiki/A-level_Critical_Thinking) pedagogy, such as assessing a source's credibility:
 
 1. Neutrality – How impartial a source of information is (biased or not).
 2. Vested Interest – When a person or organisation have something to gain from supporting a point of view.
