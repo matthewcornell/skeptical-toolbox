@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Results of &OpenCurlyQuote;{{ url }}&CloseCurlyQuote;{% endblock %}
+{# todo extract title from URL, use above #}
+
+{% block content %}
+
+    todo: analysis of &OpenCurlyQuote;{{ url }}&CloseCurlyQuote; here, e.g.,
+
+    <ul>
+        <li>URL analysis</li>
+        <li>link analysis (outgoing, incoming)</li>
+        <li>freshness measure (date of publication)</li>
+        <li>fake news detector (hoaxes)</li>
+        <li>extracted entity and topic links (people, topics)</li>
+        <li>originality checks (following the trail of the information)</li>
+        <li>check against fact-checking sites (e.g., [FactCheck.org](http://www.factcheck.org/),
+            [Snopes.com](http://snopes.com/),
+            [skepticalscience.com](http://skepticalscience.com/))
+        </li>
+        <li>check against reference sites (general as well as domain-specific, e.g., [The Skeptic's
+            Dictionary](http://www.skepdic.com/)
+        </li>
+        <li>verify people</li>
+        <li>verify quotes</li>
+        <li>check sources</li>
+    </ul>
+
+{% endblock %}
+
+
+{% block scripts %}
+{% endblock %}
