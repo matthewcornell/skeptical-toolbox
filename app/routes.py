@@ -1,7 +1,6 @@
-import urllib.request
-
 from flask import render_template, redirect, request, url_for
 
+from analysis.HtmlAnalysis import HtmlAnalysis
 from app import app
 
 
@@ -10,14 +9,16 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/analysis/')
+def need_url():
+    return "No URL found. Please go back and enter one."
+
+
 @app.route('/analysis/<path:url>')
 def analyze_url(url):
     try:
-        user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
-        req = urllib.request.Request(url, headers={'User-Agent': user_agent})   # some sites like foxnews.com require spoofing
-        httpResponse = urllib.request.urlopen(req)
-        # todo use httpResponse :-)
-        return render_template("analysis.html", url=url)
+        urlAnalysis = HtmlAnalysis(url)
+        return render_template("analysis.html", urlAnalysis=urlAnalysis)
     except Exception as e:
         return "error rendering URL: '" + url + "': " + str(e)
 

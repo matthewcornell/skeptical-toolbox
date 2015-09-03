@@ -91,3 +91,21 @@ assessing a source's credibility:
 7. Corroboration – Where more than one source of evidence supports the same conclusion.
 8. Selectivity – A measure of how representative information is compared with all of the information available.
 9. Context – The situation in which information is collected.
+
+
+# Installing
+Recommended: use a virtual environment:
+
+<pre>
+$ python3.3 ~/Downloads/virtualenv-13.1.2/virtualenv.py --system-site-packages ~/virtualenvs/skeptical-toolbox
+$ source ~/virtualenvs/skeptical-toolbox/bin/activate
+$ pip install Flask
+$ pip install gunicorn
+$ pip install beautifulsoup4
+$ pip install lxml  <- xx
+</pre>
+
+
+# Running
+TBD standard Flask app
+TBD testing
