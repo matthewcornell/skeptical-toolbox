@@ -25,9 +25,7 @@ class HtmlAnalysis(object):
             self.soup = bs(httpResponse.read(), "lxml")  # todo encoding?
         else:
             self.soup = bs(html, "lxml")
-
-    def title(self):
-        return self.soup.title.string
+        self.title = self.soup.title.string
 
     def is_offsite_link(self, a):
         """

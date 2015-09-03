@@ -18,15 +18,12 @@ class TestAnalysis(unittest.TestCase):
 
     def test_title_and_outgoing_links(self):
         for url, filename, title, num_all_links, num_offsite_links in self.url_file_title_all_off:
-            print(url)
             with open(filename) as file:
                 analysis = HtmlAnalysis(url, file.read())
-                self.assertEqual(title, analysis.title())
+                self.assertEqual(title, analysis.title)
 
                 analysis = HtmlAnalysis(url, file.read())
                 outgoing_links_all = analysis.outgoing_links(False)     # on and offsite
                 outgoing_links_offsite = analysis.outgoing_links(True)  # only offsite
-                print('  all', outgoing_links_all)
-                print('  off', outgoing_links_offsite)
                 self.assertEqual(num_all_links, len(outgoing_links_all))
                 self.assertEqual(num_offsite_links, len(outgoing_links_offsite))
