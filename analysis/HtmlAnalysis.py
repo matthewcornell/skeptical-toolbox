@@ -41,5 +41,8 @@ class HtmlAnalysis(object):
         :param only_offsite: controls whether only offsite links are included (if True) or all links (False)
         :return: list of <a> tags, excluding ones that have no text, and optionally excluding onsite ones if only_offsite
         """
-        all_links = [a for a in self.soup.find_all('a') if a.string]
+        all_links = [a for a in self.soup.find_all('a') if a.string and a.string.strip()]
         return [a for a in all_links if self.is_offsite_link(a)] if only_offsite else all_links
+
+    def outgoing_link_to_para_ratio(self):
+        return len(self.outgoing_links(True)) / len(self.soup.find_all('p'))

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Outgoing links from &OpenCurlyQuote;{{ html_analysis.title }}&CloseCurlyQuote;{% endblock %}
+
+{% block content %}
+    {% set outgoing_links = html_analysis.outgoing_links(True) %}
+
+    <h2>Outgoing links from &OpenCurlyQuote;{{ html_analysis.url }}&CloseCurlyQuote;</h2>
+    <p>Link: <a href="{{ html_analysis.url }}">{{ html_analysis.title }}</a></p>
+    <p>Found {{ outgoing_links | length }} link(s) away from the site. The outgoing link-to-paragraph ratio is
+        <strong>{{ (html_analysis.outgoing_link_to_para_ratio() * 100) | round | int}}%</strong>.</p>
+
+    <ul>
+        {% for link in outgoing_links %}
+            <li><a href="{{ link.get('href') }}">{{ link.string }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+
+{% block scripts %}
+{% endblock %}

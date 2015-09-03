@@ -23,24 +23,13 @@ def url_analysis_start(url):
         return "error rendering URL: '" + url + "': " + str(e)
 
 
-@app.route('/analysis/domain/<path:url>')
-def domain_analysis(url):
-    return "domain_analysis(): TODO. {}".format(url)
-
-
 @app.route('/analysis/links_out/<path:url>')
 def links_analysis_outgoing(url):
-    return "links_analysis_outgoing(): TODO. {}".format(url)
-
-
-@app.route('/analysis/links_in/<path:url>')
-def links_analysis_incoming(url):
-    return "links_analysis_incoming(): TODO. {}".format(url)
-
-
-@app.route('/analysis/people/<path:url>')
-def people_analysis(url):
-    return "people_analysis(): TODO. {}".format(url)
+    try:
+        html_analysis = HtmlAnalysis(url)
+        return render_template("outgoing_links.html", html_analysis=html_analysis)
+    except Exception as e:
+        return "error rendering URL: '" + url + "': " + str(e)
 
 
 @app.route('/analysis/')
