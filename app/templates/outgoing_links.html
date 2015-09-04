@@ -8,7 +8,7 @@
     <h2>Outgoing links from &OpenCurlyQuote;{{ html_analysis.url }}&CloseCurlyQuote;</h2>
     <p>Link: <a href="{{ html_analysis.url }}">{{ html_analysis.title }}</a></p>
     <p>Found {{ outgoing_links | length }} link(s) away from the site. The outgoing link-to-paragraph ratio is
-        <strong>{{ (html_analysis.outgoing_link_to_para_ratio() * 100) | round | int}}%</strong>.</p>
+        <strong>{{ (html_analysis.outgoing_link_to_para_ratio() * 100) | round | int}}%</strong> (useful?)</p>
 
     <ul>
         {% for link in outgoing_links %}

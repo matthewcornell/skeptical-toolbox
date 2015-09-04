@@ -5,11 +5,19 @@
 {% block content %}
 
     <h2>Description</h2>
-    <p>This is a simple proof of concept web app that attempts to implement the ideas put forth in
+    <p>This is a simple proof of concept web app that attempts to implement the ideas in
         <a href="https://github.com/matthewcornell/skeptical-toolbox/blob/master/README.md">
             Proposal: An online skeptical toolbox</a>. The idea is simple: Enter the URL of a news article or blog post
         whose trustworthiness you'd like to evaluate, hit Analyze, and see a host of results that you can use to
         help form your opinion on the veracity of the writing.</p>
+    <p>To try it on some timely examples:</p>
+
+    <ul>
+        <li><a href="{{ url_for('seeds_for_aggregator_url', url='https://www.reddit.com/r/skeptic/') }}">reddit.com/r/skeptic</a></li>
+        <li><a href="{{ url_for('seeds_for_aggregator_url', url='https://news.google.com/news') }}">news.google.com/news</a></li>
+        <li><a href="{{ url_for('seeds_for_aggregator_url', url='http://www.foxnews.com/') }}">foxnews.com</a></li>
+    </ul>
+
     <p>The GitHub project is at
         <a href="https://github.com/matthewcornell/skeptical-toolbox">github.com/matthewcornell/skeptical-toolbox</a>
     </p>
