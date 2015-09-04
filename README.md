@@ -12,6 +12,8 @@ Sources](http://arxiv.org/pdf/1502.03519v1.pdf). This project does no deep analy
 recognition, sentiment analysis, or any factual content. Instead it extracts useful information and links that are
 presented to the user for her ultimate analysis: reasoned judgement.
 
+This very is currently live at [skeptical-toolbox.herokuapp.com](https://skeptical-toolbox.herokuapp.com).
+
 
 # Motivation
 
